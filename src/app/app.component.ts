@@ -1,13 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { UserInputComponent } from './components/user-input.component';
+import { StudentListComponent } from './components/student-list.component';
+import { EmailFormComponent } from './components/email-form.component';
+import { NameTransformComponent } from './components/name-transform.component';
+import { NameBindingFormComponent } from './components/name-binding-form.component';
+import { StudentListSortedComponent } from './components/student-list-sorted.component';
+import { ElementNameDirective } from './directives/element-name.directive';
+import { ClassDirective } from './directives/class.directive';
+import { AttributeDirective } from './directives/attribute.directive';
+
+
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [
+    UserInputComponent,
+    StudentListComponent,
+    EmailFormComponent,
+    NameTransformComponent,
+    NameBindingFormComponent,
+    StudentListSortedComponent,
+    ElementNameDirective, 
+    ClassDirective, 
+    AttributeDirective
+  ],
 })
-export class AppComponent {
-  title = 'assign1';
-}
+export class AppComponent {}
